@@ -1,8 +1,11 @@
 from playwright.sync_api import sync_playwright,Page
 from fractions import Fraction
 import time,re,math
-USERNAME='JAR26568'
-PASSWORD='snug96'
+with open('credentials') as f:
+    _=f.read().split('\n')
+    USERNAME=_[0]
+    PASSWORD=_[1]
+    del _
 
 
 
