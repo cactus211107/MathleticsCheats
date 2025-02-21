@@ -72,11 +72,12 @@ def main():
                 qtype=None
                 if exists_in_activity_data(response,'actQuestionSelect'):
                     qtype='select'
+                print('Found type:',qtype)
                 print('Found "Questions"')
                 for q in questions:
                     print(q)
                 print('Found Answer:',answer)
-
+                print('\n'*32)
                 print('\nInstructions:')
                 if qtype=='select':
                     print(f'  Select option #{answer}')
@@ -94,7 +95,7 @@ def main():
         page.fill('#password', PASSWORD)
         page.click('button[type="submit"]')
 
-        page.wait_for_timeout(999999)
+        page.wait_for_timeout(9999999)
         # input('Press Enter to close the browser...')
 
 main()
