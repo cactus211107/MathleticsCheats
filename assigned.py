@@ -18,7 +18,7 @@ def main():
         root = ET.fromstring(xml_string)
         element = root.find('.//ActivityData/'+str(element_name))
         return element is not None
-    # Mathletic'.s decoding and their goofy naming
+    # Mathletic's decoding and their goofy naming
     def decode_mathletics_answer(encoded_base64):
         sdfs = "nihonium"
 

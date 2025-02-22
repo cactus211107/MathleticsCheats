@@ -89,7 +89,6 @@ def level_5(equation:str)->int|float: # btw, thank you github copilot for making
         if match:
             return int(match.group(2))//60
 
-    # Fuckk.. i got to do the metric conversion :( (btw, thank you copilot for doing this for me!)
     try:
         metric=re.search(r'(\d+)( |)(cm|mm|km|m|g|kg|mg|t|l|ml)( |)=( |)(cm|mm|km|m|g|kg|mg|t|l|ml)',equation)
         if metric:
@@ -160,7 +159,6 @@ def level_5(equation:str)->int|float: # btw, thank you github copilot for making
                     return digit/1000
     except:0
 
-    # mathletics is a pain, it does metric on both sides of the equation, so we have to do it twice
 
     try:
         metric=re.search(r'(cm|mm|km|m|g|kg|mg|t|l|ml)( |)=( |)(\d+)( |)(cm|mm|km|m|g|kg|mg|t|l|ml)',equation)
@@ -562,7 +560,7 @@ def level_7(equation:str)->int|float:
 
     return 0
 
-"Holy cow, this gets much harder (also, all of the notes above are written before the function is made, and harder based on how monotonous the code is)"
+"Holy cow, this gets much harder"
 def level_8(equation:str)->int|float:
     # Recurring decimals
     equation=replace_operators(equation.lower())
@@ -576,7 +574,7 @@ def level_8(equation:str)->int|float:
             return n/3
         return n
     
-    # Substitution (frick i hate this one (not bc its hard but because its annoying, yes i could have included (+|-) to get the sign, but no, i didnt feel like it))
+    # Substitution
      # 2 vars (xy)
     subst=re.match(r'find x \+ y if x = (\d+) and y (\d+)',equation)
     if subst:return int(subst.group(1))+int(subst.group(2))
